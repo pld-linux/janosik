@@ -12,7 +12,7 @@ Summary:	Janosik - a free alternative for Platnik
 Summary(pl):	Janosik - darmowa alternatywa dla Porgramu Platnika
 Name:		janosik
 Version:	0.0.2
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		Applications
 Source0:	http://www.nongnu.org/janosik/download/%{name}-%{version}.tar.gz
@@ -46,20 +46,40 @@ rm -rf $RPM_BUILD_ROOT
 #mv src/*.py $RPM_BUILD_ROOT%{_libdir}
 #mv src/* $RPM_BUILD_ROOT%{_datadir}/%{name}
 install -d $RPM_BUILD_ROOT%{_prefix}/%{name}
-cp -r * $RPM_BUILD_ROOT%{_prefix}/%{name}
+cp -r {dane,src,tmp} $RPM_BUILD_ROOT%{_prefix}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#%%doc doc test ANNOUNCE CREDITS LICENCE README README.dom README.pyexpat README.sgmlop
+%doc docs/AUTHORS docs/TODO docs/janosik-devel.txt docs/janosik.txt
 #%attr(755,root,root) %{_bindir}/*
 #%{_libdir}/*.py
 #%dir %{_datadir}/%{name}
 #%{_datadir}/%{name}/*
 %dir %{_prefix}/%{name}
-%{_prefix}/%{name}/*
+%dir %{_prefix}/%{name}/dane
+%{_prefix}/%{name}/dane/*
+%dir %{_prefix}/%{name}/src/gui
+%{_prefix}/%{name}/src/gui/*
+%dir %{_prefix}/%{name}/src/tmpl
+%{_prefix}/%{name}/src/tmpl/*
+%dir %{_prefix}/%{name}/src/wydruki
+%{_prefix}/%{name}/src/wydruki/*
+%dir %{_prefix}/%{name}/src
+%{_prefix}/%{name}/src/glade*.py
+%{_prefix}/%{name}/src/API.py
+%{_prefix}/%{name}/src/KEDU.py
+%{_prefix}/%{name}/src/KXML.py
+%{_prefix}/%{name}/src/TMPL.py
+%{_prefix}/%{name}/src/ce.py
+%{_prefix}/%{name}/src/druk.py
+%{_prefix}/%{name}/src/kody.py
+%{_prefix}/%{name}/src/misc.py
+%{_prefix}/%{name}/src/wlasciwosci.py
 %attr(755,root,root) %{_prefix}/%{name}/src/jan*.py
 %attr(755,root,root) %{_prefix}/%{name}/src/*port.py
 %attr(755,root,root) %{_prefix}/%{name}/src/weryfikacja.py
+%dir %{_prefix}/%{name}/tmp
+%{_prefix}/%{name}/tmp/*
