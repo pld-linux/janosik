@@ -1,0 +1,17 @@
+diff -Nur janosik-0.0.2/src/API.py janosik-0.0.2-paths/src/API.py
+--- janosik-0.0.2/src/API.py	2003-06-21 21:36:50.000000000 +0200
++++ janosik-0.0.2-paths/src/API.py	2003-07-04 16:04:31.000000000 +0200
+@@ -214,8 +214,11 @@
+ 
+ 
+ #zestaw:
+-root = os.path.abspath('../dane')
+-
++if os.path.isdir(os.path.expanduser('~/janosik_dane')):
++    root = os.path.abspath(os.path.expanduser('~/janosik_dane'))
++else:
++    root = os.path.abspath('../dane')
++ 
+ def nowy_platnik(dokument):
+ 	"""Funkcja tworz±ca nowego p³atnika.
+ 	
