@@ -12,16 +12,16 @@ Summary(pl):	Janosik - darmowa alternatywa dla programu Platnika
 Name:		janosik
 Version:	0.0.2
 Release:	0.5
-License:	GPL
+License:	GPL v2
 Group:		Applications
-Source0:	http://www.nongnu.org/janosik/download/%{name}-%{version}.tar.gz
+Source0:	http://janosik.net/download/%{name}-%{version}.tar.gz
 # Source0-md5:	14a7556b27fbf2c27728dc7850ad91a6
 Patch0:		%{name}-API_path.patch
-URL:		http://www.nongnu.org/janosik/
-Requires:	python-pyRXP
-Requires:	python-pygtk-glade
+URL:		http://janosik.net/
 BuildRequires:	python >= 2.2.1
 %pyrequires_eq	python-modules
+Requires:	python-pyRXP
+Requires:	python-pygtk-glade
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/local
