@@ -6,7 +6,6 @@
 # - anyway - DO NOT TOUCH UNTIL TOLD TO DO SO, IT'S A MESS PRIVATE!
 # - Dumbest Spec in History candidate!
 #
-%include	/usr/lib/rpm/macros.python
 
 Summary:	Janosik - a free alternative for Platnik
 Summary(pl):	Janosik - darmowa alternatywa dla Porgramu Platnika
