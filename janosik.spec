@@ -8,7 +8,7 @@
 #
 
 Summary:	Janosik - a free alternative for Platnik
-Summary(pl):	Janosik - darmowa alternatywa dla programu Platnika
+Summary(pl.UTF-8):   Janosik - darmowa alternatywa dla programu Platnika
 Name:		janosik
 Version:	0.0.2
 Release:	0.5
@@ -29,9 +29,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Janosik is a multi-platform alternative for the Platnik program.
 
-%description -l pl
-Janosik jest wieloplatformowym odpowiednikiem programu P≥atnik,
-s≥uø±cym do rozliczeÒ z Zak≥adem UbezpieczeÒ Spo≥ecznych.
+%description -l pl.UTF-8
+Janosik jest wieloplatformowym odpowiednikiem programu P≈Çatnik,
+s≈Çu≈ºƒÖcym do rozlicze≈Ñ z Zak≈Çadem Ubezpiecze≈Ñ Spo≈Çecznych.
 
 %prep
 %setup -q
