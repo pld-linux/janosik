@@ -8,7 +8,7 @@
 #
 
 Summary:	Janosik - a free alternative for Platnik
-Summary(pl.UTF-8):   Janosik - darmowa alternatywa dla programu Platnika
+Summary(pl.UTF-8):	Janosik - darmowa alternatywa dla programu Platnika
 Name:		janosik
 Version:	0.0.2
 Release:	0.5
